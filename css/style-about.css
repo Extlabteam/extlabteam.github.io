@@ -1,0 +1,62 @@
+/* Базовые отступы и фон секции About */
+.about-section {
+  background: linear-gradient(135deg, #eef2ff, #c7d2fe);
+  padding: 50px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.15);
+  margin: 40px auto;
+  max-width: 900px;
+  font-family: 'Inter', sans-serif;
+  color: #333;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Заголовок About */
+.about-section h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #4f46e5;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Анимация звездочки */
+.about-section .sparkle {
+  font-size: 1.8rem;
+  color: #6366f1;
+  animation: sparkleAnim 2.5s infinite ease-in-out;
+  user-select: none;
+}
+
+@keyframes sparkleAnim {
+  0%, 100% { opacity: 1; transform: scale(1) rotate(0deg); }
+  50%      { opacity: 0.6; transform: scale(1.2) rotate(15deg); }
+}
+
+/* Текст в About */
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Ссылка Learn More */
+.about-section .learn-more-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: 700;
+  color: #4f46e5;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.about-section .learn-more-link:hover {
+  color: #6366f1;
+  text-decoration: underline;
+}

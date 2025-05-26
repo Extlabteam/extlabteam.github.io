@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="project/css/style-head-footer.css" />
+  <link rel="stylesheet" href="project/css/style-main.css" />
+  <style>
+    .policy-box {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .contact-form {
+      margin-top: 20px;
+      display: none;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .contact-form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 15px;
+      font-size: 1rem;
+    }
+    .contact-form label > .label-text {
+      display: inline-flex;
+      align-items: center;
+    }
+    .contact-form label > .label-text .required {
+      color: red;
+      margin-left: 4px;
+      font-size: 1em;
+      vertical-align: middle;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      display: block;
+      margin-top: 5px;
+      width: 100%;
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      resize: vertical;
+      box-sizing: border-box;
+    }
+    .contact-form button {
+      background: #4f46e5;
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-weight: 600;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      align-self: flex-start;
+    }
+    .contact-form button:hover {
+      background: #3b35b3;
+    }
+    .required-note {
+      font-size: 0.9rem;
+      color: red;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  <main class="policy-container">
+    <div class="policy-box">
+      <h1>Contact Us</h1>
+      <p>If you have any questions or feedback, please fill out the form below or send us an email directly.</p>
+
+      <button id="showFormBtn" style="background:#4f46e5; color:#fff; padding:12px 24px; border:none; border-radius:6px; cursor:pointer; font-weight:600;">
+        Show Contact Form
+      </button>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <label for="name">
+          <span class="label-text">Your Name <span class="required">*</span></span>
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+        </label>
+
+        <label for="email">
+          <span class="label-text">Your Email <span class="required">*</span></span>
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+        </label>
+
+        <label for="subject">
+          <span class="label-text">Subject <span class="required">*</span></span>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required />
+        </label>
+
+        <label for="message">
+          <span class="label-text">Your Message <span class="required">*</span></span>
+          <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+        </label>
+
+        <button type="submit">Send Message</button>
+
+        <div class="required-note">* All fields are required</div>
+      </form>
+    </div>
+  </main>
+
+<script>
+  const showFormBtn = document.getElementById('showFormBtn');
+  const contactForm = document.getElementById('contactForm');
+
+  showFormBtn.addEventListener('click', () => {
+    if (contactForm.style.display === 'flex') {
+      contactForm.style.display = 'none';
+      showFormBtn.textContent = 'Show Contact Form';
+    } else {
+      contactForm.style.display = 'flex';
+      showFormBtn.textContent = 'Hide Contact Form';
+    }
+  });
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const subject = document.getElementById('subject').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !subject || !message) {
+      alert('Please fill out all required fields.');
+      return;
+    }
+
+    const mailSubject = encodeURIComponent(subject);
+    const mailBody = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+
+    window.location.href = `mailto:extlabteam@gmail.com?subject=${mailSubject}&body=${mailBody}`;
+  });
+</script>
+
+</body>
+</html>

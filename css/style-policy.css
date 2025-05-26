@@ -1,0 +1,98 @@
+/* Общие стили для body */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: #f9f9ff;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased; /* для более гладкого шрифта */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Основной контейнер с центровкой */
+main.policy-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  background: #f9f9ff;
+}
+
+/* Политика в коробке с тенью */
+.policy-box {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 40px 50px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.policy-box:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Заголовок страницы */
+.policy-box h1 {
+  text-align: center;
+  color: #4f46e5; /* красивый синий */
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  font-weight: 700;
+}
+
+/* Заголовки разделов */
+.policy-box h2 {
+  margin-top: 36px;
+  margin-bottom: 16px;
+  color: #222;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+/* Абзацы */
+.policy-box p {
+  line-height: 1.65;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Списки в контенте */
+.policy-box ul {
+  margin: 12px 0 18px 20px;
+  color: #555;
+}
+
+.policy-box ul li {
+  margin-bottom: 8px;
+}
+
+/* Подвал страницы */
+footer {
+  background: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  box-shadow: 0 -3px 7px rgba(0, 0, 0, 0.07);
+  user-select: none;
+}
+
+/* Ссылки в футере */
+footer a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.25s ease;
+}
+
+footer a:hover {
+  text-decoration: underline;
+  color: #3730a3; /* чуть темнее при ховере */
+}

@@ -1,0 +1,152 @@
+/* Сброс и базовые стили для header и footer */
+header, footer {
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 100%;
+  padding: 15px 0;
+  font-family: 'Inter', sans-serif;
+  transition: box-shadow 0.3s ease;
+  position: relative;
+}
+
+/* Подсветка для header */
+header {
+  box-shadow:
+    0 6px 15px rgba(75, 85, 239, 0.3), /* подсветка снизу */
+    0 2px 5px rgba(0,0,0,0.05);
+}
+
+header:hover {
+  box-shadow:
+    0 8px 25px rgba(75, 85, 239, 0.6), /* усиленная подсветка при ховере */
+    0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Звёздочка справа внизу header */
+header::after {
+  content: "✨";
+  font-weight: 900;
+  font-size: 1.2rem;
+  color: #6366f1;
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  user-select: none;
+}
+
+/* Контейнер для центрирования и отступов */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Логотип */
+.logo {
+  font-weight: 700;
+  font-size: 1.8rem;
+  color: #4f46e5;
+  text-decoration: none;
+  user-select: none;
+}
+
+/* Навигационные ссылки */
+.nav-links a {
+  margin-left: 25px;
+  font-weight: 600;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4f46e5;
+  text-decoration: none; /* убираем подчеркивание */
+}
+
+
+
+/* Чтобы футер всегда был внизу, даже если мало контента */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+}
+
+
+
+footer {
+  background: #fff;
+  padding: 20px 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4f46e5;       /* приятный синий оттенок */
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  font-style: italic;
+  box-shadow: 
+    0 -6px 15px rgba(75, 85, 239, 0.3),  /* подсветка сверху */
+    0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+  background-color: #f0f4ff; /* лёгкая подсветка при наведении */
+  color: #3b34b3;
+  box-shadow: 
+    0 -8px 25px rgba(75, 85, 239, 0.6),  /* усиленная подсветка сверху при ховере */
+    0 4px 10px rgba(75, 85, 239, 0.3);
+}
+
+footer::before {
+  content: "✨"; /* иконка или символ */
+  font-weight: 900;
+  font-size: 1.1rem;
+  color: #6366f1;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #667;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+footer a {
+  color: #4f46e5;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  margin: 0 8px;
+}
+
+footer a:hover {
+  color: #2c1db0;
+  text-decoration: underline;
+  text-shadow: 0 0 5px #2c1db0;
+}
+
