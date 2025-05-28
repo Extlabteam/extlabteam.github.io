@@ -44,7 +44,6 @@ header {
   margin-top: 1rem;
 }
 
-/* Кнопки навигации */
 .nav-links a {
   font-weight: 600;
   color: #333;
@@ -52,14 +51,18 @@ header {
   padding: 8px 14px;
   border-radius: 8px;
   background-color: rgba(99, 102, 241, 0.05);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  position: relative;
 }
 
-/* Наведение */
+/* Наведение с анимацией */
 .nav-links a:hover {
-  background-color: rgba(99, 102, 241, 0.1);
+  background-color: rgba(99, 102, 241, 0.15);
   color: #4f46e5;
+  transform: translateY(-3px); /* лёгкий подъём */
+  box-shadow: 0 4px 8px rgba(99, 102, 241, 0.3); /* небольшая тень */
 }
+
 
 /* Разделители между кнопками, вне самих кнопок */
 .nav-links a + a::before {
