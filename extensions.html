@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Extensions – Extension Lab Studio</title>
+  <link rel="stylesheet" href="css/style-head-footer.css" />
+  <link rel="stylesheet" href="css/style-main.css" />
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .extensions {
+      max-width: 1100px;
+      margin: 60px auto;
+      padding: 0 20px;
+      text-align: center;
+    }
+
+    .extensions h1 {
+      font-size: 2.7rem;
+      color: #1e1e2f;
+      margin-bottom: 40px;
+    }
+
+    .pair {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+      margin-bottom: 50px;
+    }
+
+    .card {
+      flex: 1 1 300px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 20px;
+      padding: 35px 30px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      max-width: 500px;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(79, 70, 229, 0.25);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #4b5563;
+    }
+
+    .features {
+      margin: 0 0 20px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      padding-left: 22px;
+      position: relative;
+      color: #374151;
+      font-size: 0.95rem;
+    }
+
+    .features li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: #4f46e5;
+      font-weight: bold;
+    }
+
+    .price {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 16px;
+      color: #4f46e5;
+    }
+
+    .button {
+      text-align: center;
+      background-color: #4f46e5;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #4338ca;
+    }
+
+    .back-home {
+      display: inline-block;
+      margin-top: 50px;
+      text-decoration: none;
+      color: #4f46e5;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+
+    .back-home:hover {
+      color: #3730a3;
+    }
+
+    footer {
+      margin-top: 60px;
+    }
+
+    .label {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 0.75rem;
+      background-color: #d1d5db;
+      border-radius: 6px;
+      color: #374151;
+      margin-bottom: 12px;
+    }
+
+    .pro .label {
+      background-color: #c7d2fe;
+      color: #3730a3;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="extensions">
+    <h1>Our Browser Extensions</h1>
+
+    <!-- Site Time Tracker -->
+    <div class="pair">
+      <div class="card">
+        <span class="label">Free</span>
+        <h2>Site Time Tracker</h2>
+        <p>Track your time on websites and stay productive.</p>
+        <ul class="features">
+          <li>Track time per domain</li>
+          <li>Daily/weekly stats</li>
+          <li>Auto pause on idle</li>
+        </ul>
+        <div class="price">Free</div>
+        <a href="#" class="button">Get Free Version</a>
+      </div>
+
+      <div class="card pro">
+        <span class="label">Pro</span>
+        <h2>Site Time Tracker Pro</h2>
+        <p>Advanced time tracking and customization options.</p>
+        <ul class="features">
+          <li>All Free features</li>
+          <li>Monthly stats</li>
+          <li>Custom reports</li>
+          <li>Theme selection</li>
+          <li>Export to CSV</li>
+        </ul>
+        <div class="price">$4.99</div>
+        <a href="#" class="button">Upgrade Now ↗</a>
+      </div>
+    </div>
+
+    <!-- Copy URL -->
+    <div class="pair">
+      <div class="card">
+        <span class="label">Free</span>
+        <h2>Copy URL</h2>
+        <p>Copy page links in text, markdown or HTML formats.</p>
+        <ul class="features">
+          <li>Copy in 3 formats</li>
+          <li>Simple interface</li>
+          <li>Keyboard shortcut</li>
+        </ul>
+        <div class="price">Free</div>
+        <a href="#" class="button">Get Free Version</a>
+      </div>
+
+      <div class="card pro">
+        <span class="label">Pro</span>
+        <h2>Copy URL Pro</h2>
+        <p>Enhanced features for power users and professionals.</p>
+        <ul class="features">
+          <li>All Free features</li>
+          <li>Batch copy links</li>
+          <li>History & recent URLs</li>
+          <li>Custom templates</li>
+          <li>Export to CSV</li>
+        </ul>
+        <div class="price">$2.99</div>
+        <a href="#" class="button">Upgrade Now ↗</a>
+      </div>
+    </div>
+
+ <a href="index.html" class="btn-back">← Back to Home</a>
+
+  </section>
+
+</body>
+</html>
